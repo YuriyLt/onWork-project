@@ -1,0 +1,36 @@
+.page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--second-bg-color);
+    width: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.page-logo {
+    width: 178px;
+    height: 94px;
+}
+
+.page-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: 27px;
+    margin: 0;
+
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+}
+.navigation-list {
+    margin-right: 20px;
+}
+
+.active {
+    color: var(--secondary-color);
+}
+
