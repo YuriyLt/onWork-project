@@ -1,26 +1,32 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
     Write direct message to us
 </button>
-<div class="modal " id="myModal">
+<div class="modal" id="myModal">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
   
         
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Write your message here and our managers will reach out to you!</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
   
        
         <div class="modal-body">
-          Modal body..
+          <form action="">
+              <fieldset>
+                <label for="modalEmail">Your email *</label>
+                <input type="email" name="email" id="modalEmail" required>
+                <label for="modalTopic">Topic *</label>
+                <input type="text" name="Topic" id="modalTopic">
+                <label for="modalMessage">Message *</label>
+                <input type="text" name="Message" id="modalMessage" required>
+                <input type="checkbox" name="checkbox" id="modalCheckbox" ngModel required>
+                <label for="modalCheckbox">Some sort of text here. Whether user agrees with T&C or privacy policy</label>
+                <input type="submit" value="Send message">
+              </fieldset>
+          </form>
         </div>
-  
-     
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
-  
       </div>
     </div>
   </div>
