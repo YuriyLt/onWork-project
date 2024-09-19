@@ -9,5 +9,5 @@ import { ModalComponent } from './modal/modal.component';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  email: string = "";
 }
