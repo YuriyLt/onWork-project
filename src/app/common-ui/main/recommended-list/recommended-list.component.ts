@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Casino, casinoes } from './recommended-casino-list.model';
+import { Casino, casinoes } from '../../../casino';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -27,6 +27,7 @@ import { NgFor } from '@angular/common';
 
   styleUrls: ['./recommended-list.component.scss']
 })
+
 export class RecommendedListComponent {
   casinoes: Casino[] = casinoes;
 }
