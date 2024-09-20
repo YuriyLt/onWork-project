@@ -7,6 +7,107 @@
     background-color: transparent;
 }
 
+.btn-close {
+    width: 18.63px;
+    height: 18.63px;
+    color: #fff;;
+    margin: 0;
+}
+
 .modal {
-    color: black;
+    color: #fff;
+    transform: translateX(-10%);
+    
+}
+
+.modal-title {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.modal-content {
+    width: 948px;
+    height: 616px;
+    background-color: var(--second-bg-color); 
+    border-radius: 37px;
+}
+.modal-dialog {
+    width: 948px;
+    height: 616px;
+    position: relative;
+    pointer-events: none;
+    
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+.modal-body {
+    width: 948px;
+    height: 616px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.modalEmail, .modalTopic, .modalMessage {
+    width: auto;
+    height: 50px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    background-color: #343374;
+    border: none;
+    border-radius: 44px;
+    padding-left: 32px;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+}
+
+.modalMessage {
+    height: 201px;
+    resize: none;
+    border-radius: 26px;
+}
+
+.modalEmail::placeholder,
+.modalTopic::placeholder, 
+.modalMessage::placeholder  {
+    color: #fff;
+    opacity: 1;
+}
+
+.modal-checkbox-label {
+    margin-left: 20px;
+}
+
+.modal-checkbox-ico {
+    width: 24px;
+    height: 24px;
+}
+
+.sendMessageBtn {
+    width: 196px;
+    height: 47px;
+    border-radius: 40px;
+    padding: 10px, 30px, 10px, 30px;
+    gap: 10px;
+    color: #fff;
+    background-color: #5C67ED;
+    border: none;
 }

@@ -1,23 +1,28 @@
 .main-container {
-    padding-right: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: var(--bg-color);
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .main-info {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1720px;
+    width: 1920px;
     height: 550px; 
     padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    
 }
 
 .main-info_adv {
     margin-top: 130px;
+    margin-left: 100px;
 }
 
 .main-info_adv > h1 {
@@ -71,6 +76,7 @@
     height: 550px;
     background-image: url(../../../assets/bgElephant.svg);
     color: #fff;
+    margin-right: 100px;
 }
 
 .text-container {
