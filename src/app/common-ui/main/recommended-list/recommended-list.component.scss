@@ -53,6 +53,11 @@
     line-height: 24px;
 }
 
+.sublist:nth-child(1) > li > img {
+    width: 74px;
+    height: 39px;
+}
+
 .rec-btn {
     margin-left: calc(((100%) - 147px)/2);
     width: 147px;

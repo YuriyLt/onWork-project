@@ -1,3 +1,13 @@
+.position-container {
+  display: flex; 
+  width: 1570px;
+  flex-wrap: wrap;
+} 
+
+.container:nth-child(odd) {
+  margin-right: 22px;
+}
+
 .container {  
   display: grid;
   justify-content: space-between;
@@ -10,6 +20,10 @@
   grid-template-areas:
     "casinoType aboutCasino"
     "casinoType paymentSection"; 
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 32px;
 }
 
 .casinoType { 
@@ -102,6 +116,7 @@
   gap: 10px;
   background-color: #323082;
   align-content: center;
+  text-align: center;
 }
 
 .ratings {
@@ -126,7 +141,6 @@
   width: 132px;
   height: 44px;
   padding: 6px 24px 6px 24px;
-  gap: 10px;
   border: none;
   border-radius: 32px;
   background: #FF7300;
