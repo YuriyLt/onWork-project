@@ -4,6 +4,7 @@ export interface Casino {
     rating: string;
     starRating: string; 
     desc: string;
+    link: string;
     aboutHeading: string;
     aboutImgBonuss: string;
     aboutImgWithdraw: string;
@@ -19,7 +20,11 @@ export interface Casino {
     paymentAstropay: string; 
     paymentDE: string; 
     paymentCitadele: string;
-    paymentBitcoin: string;   
+    paymentBitcoin: string; 
+    bonusName: string;
+    bonusAmount: string; 
+    bonusFreespins: string; 
+    bonusMax: string;  
 }
 
 export const casinoes: Casino[] = [
@@ -29,6 +34,7 @@ export const casinoes: Casino[] = [
         rating: '9/10', 
         starRating: '../../../../assets/rating.svg', 
         desc: '"Revolutionary transparency for the players"',
+        link: 'https://royspins.com/',
         aboutHeading: 'About RoySpins Casino',
         aboutImgBonuss: '../../../../assets/bonuss.svg',
         aboutImgWithdraw: '../../../../assets/clock.svg',
@@ -45,6 +51,10 @@ export const casinoes: Casino[] = [
         paymentDE: '../assets/deposit-express.svg',
         paymentCitadele: '../assets/citadele.svg',
         paymentBitcoin: '../assets/bitcoin.svg',
+        bonusName: 'Welcome Bonus Pack',
+        bonusAmount: 'Up to 150% Bonus',
+        bonusFreespins: '225 FreeSpins',
+        bonusMax: 'Max Bonus3000 EUR'
     },
     { 
         logo: "../../../../assets/BIA.svg", 
@@ -52,6 +62,7 @@ export const casinoes: Casino[] = [
         rating: '8.9/10', 
         starRating: '../../../../assets/rating.svg', 
         desc:'“ Some sentence about this casino, this might be some feedback from the user.”',
+        link: '',
         aboutHeading: 'About BetitAll Casino',
         aboutImgBonuss: '../../../../assets/bonuss.svg',
         aboutImgWithdraw: '../../../../assets/clock.svg',
@@ -68,6 +79,10 @@ export const casinoes: Casino[] = [
         paymentDE: '../assets/deposit-express.svg',
         paymentCitadele: '../assets/citadele.svg',
         paymentBitcoin: '../assets/bitcoin.svg', 
+        bonusName: 'Welcome Bonus Pack',
+        bonusAmount: 'Up to 150% Bonus',
+        bonusFreespins: '225 FreeSpins',
+        bonusMax: 'Max Bonus3000 EUR'
     },
     { 
         logo: "../../../../assets/pledoo.svg", 
@@ -75,6 +90,7 @@ export const casinoes: Casino[] = [
         rating: '9/10', 
         starRating:'../../../../assets/rating.svg',
         desc:'“ Some sentence about this casino, this might be some feedback from the user.”',
+        link: '',
         aboutHeading: 'About Pledoo Casino',
         aboutImgBonuss: '../../../../assets/bonuss.svg',
         aboutImgWithdraw: '../../../../assets/clock.svg',
@@ -90,7 +106,11 @@ export const casinoes: Casino[] = [
         paymentAstropay: '../assets/astropay_payment.svg', 
         paymentDE: '../assets/deposit-express.svg',
         paymentCitadele: '../assets/citadele.svg',
-        paymentBitcoin: '../assets/bitcoin.svg'
+        paymentBitcoin: '../assets/bitcoin.svg',
+        bonusName: 'Welcome Bonus Pack',
+        bonusAmount: 'Up to 150% Bonus',
+        bonusFreespins: '225 FreeSpins',
+        bonusMax: 'Max Bonus3000 EUR'
     },
 
     { 
@@ -99,6 +119,7 @@ export const casinoes: Casino[] = [
         rating: '9.2/10', 
         starRating:'../../../../assets/rating.svg', 
         desc:'“ Some sentence about this casino, this might be some feedback from the user.”',
+        link: '',
         aboutHeading: 'About Wazbee Casino',
         aboutImgBonuss: '../../../../assets/bonuss.svg',
         aboutImgWithdraw: '../../../../assets/clock.svg',
@@ -115,6 +136,10 @@ export const casinoes: Casino[] = [
         paymentDE: '../assets/deposit-express.svg',
         paymentCitadele: '../assets/citadele.svg',
         paymentBitcoin: '../assets/bitcoin.svg',
+        bonusName: 'Welcome Bonus Pack',
+        bonusAmount: 'Up to 150% Bonus',
+        bonusFreespins: '225 FreeSpins',
+        bonusMax: 'Max Bonus3000 EUR'
     },
 ];
 

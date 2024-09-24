@@ -1,0 +1,26 @@
+<h2>Available Bonuses</h2>
+<div class="available-bg">
+    <div class="available" *ngFor="let casino of casinoes">
+        <div class="available-visual">
+            <div class="available-logo"><img [src]="casino.logo" alt="{{casino.name}}"></div>
+            <div class="available-rating"><img [src]="casino.starRating" alt="{{casino.rating}}"></div>
+        </div>
+    <div class="available-container">
+        <h3>{{casino.bonusName}}</h3>
+        <ul>
+            <li>
+                <img src="../../../../assets/Package.svg" alt="">
+                <span>{{casino.bonusAmount}}</span>
+            </li>
+            <li>
+                <img src="../../../../assets/Package.svg" alt="">
+                <span>{{casino.bonusFreespins}}</span>
+            </li>
+            <li>
+                <img src="../../../../assets/Package.svg" alt="">
+                <span>{{casino.bonusMax}}</span>
+            </li>
+        </ul>
+        <button class="available-btn"><a [href]="casino.link">Claim Bonus</a></button>
+    </div>
+</div>

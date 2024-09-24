@@ -29,7 +29,11 @@
     margin-right: 20px;
 }
 
+.routerLink {
+    text-decoration: none;
+    color: #fff;
+}
+
 .active {
     color: var(--secondary-color);
 }
-

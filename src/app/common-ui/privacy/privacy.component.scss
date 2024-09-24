@@ -1,6 +1,31 @@
+.privacy-container {
+    display: block;
+    width: 1327px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .privacyHeader {
     font-weight: 500;
     font-size: 24px;
     line-height: 36.6px;
     color: #A4AAF8;
 }
+
+.privacy-list > ol {
+    margin-bottom: 0;
+}
+
+.privacy-list-pointer > li {
+    list-style: disc;
+    padding: 0;
+    transform: translateX(-2.5%);
+    margin-top: 0;
+}
+

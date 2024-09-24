@@ -5,7 +5,7 @@ import { Casino, casinoes } from '../../../casino';
 @Component({
   selector: 'app-casino-list',
   standalone: true,
-  imports: [ CommonModule, NgFor ],
+  imports: [CommonModule],
   template: `
   <div class="position-container">
     <div class="container" *ngFor="let casino of casinoes">
@@ -16,7 +16,7 @@ import { Casino, casinoes } from '../../../casino';
         <div class="rating">{{casino.rating}}</div>
         <div class="starRating"><img width="70px" height="13px" [src]="casino.starRating"></div>
         </div>
-        <div class="buttonVisit"><button>Visit casino</button></div>
+        <div class="buttonVisit"><button><a [href]="casino.link">Visit casino</a></button></div>
         </div>
       </div>
       <div class="aboutCasino">
