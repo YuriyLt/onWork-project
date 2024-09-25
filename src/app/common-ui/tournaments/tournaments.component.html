@@ -1,0 +1,12 @@
+<h2 class="title">Tournaments</h2>
+<span class="desc">Looking to add some excitement to your online gaming experience? Check out the special tournaments offered by 3Betup Team. These tournaments offer substantial prize pools and operate separately from regular bonuses and promotions.</span>
+<div class="tournament-pos">
+    <div *ngFor="let tournament of tournaments" class="tournament">
+        <img [src]="tournament.logo" alt="">
+        <img [src]="tournament.img" alt="prizepool">
+        <span class="tournament-date">{{tournament.date}}</span>
+        <span class="tournament-prize">{{tournament.prize}}</span>
+        <button><a class="btn-link" [href]="tournament.link">Join now</a></button>
+    </div>
+    <button class="btn-more">See more</button>
+</div>

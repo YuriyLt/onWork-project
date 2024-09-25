@@ -1,0 +1,94 @@
+.title {
+    width: auto;
+    margin-left: calc((100% - 138px)/2);
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.desc {
+    display: block;
+    text-align: center;
+    width: 1178px;
+    margin-left: calc((100% - 1178px)/2);
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27.45px;
+    margin-bottom: 30px;
+}
+
+.tournament-pos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 250px;
+}
+
+.tournament {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 338px;
+    height: 373px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 27px;
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+
+.tournament:nth-child(4n) {
+    margin-right: 0;
+}
+
+.tournament-date {
+    font-weight: 500;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+.tournament-prize {
+    font-weight: 600;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+.tournament > button {
+    width: 313px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 120px;
+    border: none;
+    border-radius: 94px;
+    background-color: #4B0D64;
+}
+
+.btn-link {
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-more {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 30px;
+    width: 147px;
+    height: 47px;
+    background-color: #5C67ED;
+    margin-bottom: 100px;
+}

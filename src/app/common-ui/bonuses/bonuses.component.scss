@@ -1,0 +1,31 @@
+.bonus-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h2 {
+    color: #A4AAF8;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36.6px;
+}
+
+.btn-seemore {
+    margin-left: calc((100% - 147px)/2);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 30px;
+    width: 147px;
+    height: 47px;
+    background-color: #5C67ED;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
