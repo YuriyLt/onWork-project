@@ -8,7 +8,13 @@ import { PrivacyComponent } from './common-ui/privacy/privacy.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, MainComponent, FooterComponent, PrivacyComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    MainComponent,
+    FooterComponent,
+    PrivacyComponent,
+    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

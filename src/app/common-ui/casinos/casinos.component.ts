@@ -10,7 +10,8 @@ import { Casino, casinoes } from '../../casino';
   styleUrls: [
     './casinos.component.scss', 
     '../main/recommended-list/recommended-list.component.scss',
-    '../main/main.component.scss']
+    '../main/main.component.scss'
+  ]
 
 })
 export class CasinosComponent {
