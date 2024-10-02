@@ -4,6 +4,7 @@ import { HeaderComponent } from './common-ui/header/header.component';
 import { MainComponent } from "./common-ui/main/main.component";
 import { FooterComponent } from "./common-ui/footer/footer.component";
 import { PrivacyComponent } from './common-ui/privacy/privacy.component';
+import { LoaderComponent } from '../app/common-ui/store/loader.component'
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { PrivacyComponent } from './common-ui/privacy/privacy.component';
     RouterOutlet,
     HeaderComponent,
     MainComponent,
+    LoaderComponent,
     FooterComponent,
     PrivacyComponent,
     ],

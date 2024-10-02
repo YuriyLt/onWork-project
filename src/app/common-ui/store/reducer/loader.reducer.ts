@@ -9,4 +9,12 @@ export const initialState: loaderStateInterface = {
 
 export const reducers = createReducer(
     initialState,
-    on(LoaderActions.getLoader, (state) => ({...state, isLoading: true})));
+    on(LoaderActions.getLoader, (state) => ({...state, isLoading: true, error:null
+    })),
+    on(LoaderActions.getLoaderSuccess, (state, { loader }) => ({...state, isLoading: false, error: null
+    })),
+    on(LoaderActions.getLoaderFail, (state, { loader }) => ({...state, isLoading: false, error: loader
+    })),
+    on(LoaderActions.setLoading, (state, { isLoading }) => ({...state, isLoading
+    }))
+)
