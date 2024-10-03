@@ -11,6 +11,7 @@ import { LoaderService } from './common-ui/store/service/loader.service';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot(reducers),
     StoreModule.forFeature('loader', reducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,

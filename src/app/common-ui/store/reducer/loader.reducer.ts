@@ -5,7 +5,8 @@ import * as LoaderActions from '../action/loader.action';
 export const initialState: loaderStateInterface = {
     isLoading: false,
     error: null,
-}
+    loader: null,
+};
 
 export const reducers = createReducer(
     initialState,
