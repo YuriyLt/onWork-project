@@ -4,13 +4,13 @@ import * as LoaderActions from './action/loader.action';
 import { isLoadingSelector } from './selectors/loader.selectors';
 import { Observable } from 'rxjs';
 import { AppStateInterfaces } from '../../app-state-interfaces';
-import { CommonModule, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-loader',
   standalone: true,
-  imports: [NgIf, CommonModule],
+  imports: [CommonModule],
   templateUrl: './loader.component.html',
   styleUrl: './loader.component.scss'
 })

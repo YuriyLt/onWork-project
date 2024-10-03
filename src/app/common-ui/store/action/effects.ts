@@ -3,7 +3,6 @@ import { Actions, createEffect, ofType} from "@ngrx/effects";
 import * as LoaderActions from '../action/loader.action';
 import { delay, catchError, of, switchMap } from "rxjs";
 import { LoaderService } from "../service/loader.service";
-import { error } from "console";
 
 @Injectable()
 export class LoaderEffects {

@@ -1,6 +1,9 @@
-.loader-display {
+.loader-container {
     width: 400px;
     height: 400px;
     background-color: orangered;
-    z-index: 999;
+}
+
+.loader-display {
+    color: #fff;
 }
