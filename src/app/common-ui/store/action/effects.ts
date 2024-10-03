@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Actions, createEffect, ofType} from "@ngrx/effects";
 import * as LoaderActions from '../action/loader.action';
 import { delay, catchError, of, switchMap } from "rxjs";
 import { LoaderService } from "../service/loader.service";
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 
 @Injectable()
 export class LoaderEffects {

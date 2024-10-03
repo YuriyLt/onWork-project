@@ -8,7 +8,7 @@ export const initialState: loaderStateInterface = {
     loader: null,
 };
 
-export const reducers = createReducer(
+export const LoaderReducers = createReducer(
     initialState,
     on(LoaderActions.getLoader, (state) => ({...state, isLoading: true, error:null
     })),
