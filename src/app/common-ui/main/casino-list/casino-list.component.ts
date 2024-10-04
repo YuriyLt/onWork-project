@@ -7,6 +7,7 @@ import { Casino, casinoes } from '../../../casino';
   standalone: true,
   imports: [CommonModule],
   template: `
+  <h2 class='mainSectionHeading'>Top Casinos</h2>
   <div class="position-container">
     <div class="container" *ngFor="let casino of casinoes">
     <div class="casinoType">

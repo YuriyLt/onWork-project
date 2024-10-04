@@ -4,20 +4,18 @@
     align-items: center;
     justify-content: flex-start;
     background-color: var(--bg-color);
-    padding-left: 100px;
-    padding-right: 100px;
 }
 
 .main-info {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 550px;    
+    margin-top: 10px;
+    width: 1600px;
 }
 
 .main-info_adv {
     margin-top: 130px;
-    margin-left: 100px;
 }
 
 .main-info_adv > h1 {
@@ -66,14 +64,6 @@
     margin-right: 10px;
 }
 
-.main-elephant {
-    width: 638px;
-    height: 550px;
-    background-image: url(../../../assets/bgElephant.svg);
-    color: #fff;
-    margin-right: 100px;
-}
-
 .text-container {
     width: auto;
     height: 28px;
@@ -82,42 +72,6 @@
     line-height: 14.16px;
     align-items: center;
     justify-content: center;
-}
-
-.info-ep {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 140px;
-    height: 120px;
-    margin-top: 25px;
-    margin-bottom: 80px;
-}
-
-.first {
-    padding-top: 20px;
-    transform: translate(420px, 50px);
-    background-image: url(../../../assets/vector2.svg);
-    background-repeat: no-repeat;
-}
-
-.middle {
-    padding-top: 20px;
-    transform: translate(-90px, 15px );
-    background-image: url(../../../assets/vector1.svg);
-    background-repeat: no-repeat;
-    background-position-x: 10px;
-}
-
-.last {
-    width: 160px;
-    margin-bottom: 0;
-    padding-top: 20px;
-    padding-left: 0;
-    transform: translate(450px, -100px);
-    background-image: url(../../../assets/vector3.svg);
-    background-repeat: no-repeat;
-    background-position-x: 0px;
 }
 
 .casino-list {

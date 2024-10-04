@@ -3,9 +3,9 @@
     flex-direction: row;
     align-items: center;
     background-color: var(--second-bg-color);
-    // width: auto;
-    padding-left: 100px;
-    padding-right: 100px;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page-logo {
@@ -38,6 +38,7 @@
     color: var(--secondary-color);
 }
 
-.loader {
-    
+header {
+    width: 100%;
+    background-color: var(--second-bg-color);
 }

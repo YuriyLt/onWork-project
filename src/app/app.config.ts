@@ -10,6 +10,7 @@ import { provideEffects } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from '../app/common-ui/store/state/loaderState.interface'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
 providers: [
@@ -19,6 +20,6 @@ providers: [
       maxAge: 25,
       connectInZone: true
   }), 
-   ),
+   ), provideAnimationsAsync(),
   ]
 };

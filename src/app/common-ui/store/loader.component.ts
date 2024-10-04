@@ -5,12 +5,12 @@ import { isLoadingSelector } from './selectors/loader.selectors';
 import { Observable } from 'rxjs';
 import { AppStateInterfaces } from '../../app-state-interfaces';
 import { CommonModule } from '@angular/common';
-
+import { MatProgressBarModule} from '@angular/material/progress-bar'
 
 @Component({
   selector: 'app-loader',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatProgressBarModule],
   templateUrl: './loader.component.html',
   styleUrl: './loader.component.scss'
 })

@@ -1,10 +1,24 @@
 .loader-container {
-    width: 400px;
-    height: 400px;
-    background-color: orangered;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    z-index: 999998;
 }
 
 .loader-display {
-    color: #fff;
-    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.progressBar {
+    display: block;
+    width: 500px;
+    height: 5px;
 }

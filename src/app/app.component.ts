@@ -8,7 +8,7 @@ import { LoaderComponent } from '../app/common-ui/store/loader.component'
 import { preloaderSelector } from './common-ui/store/selectors/loader.selectors';
 import { AppStateInterfaces } from './app-state-interfaces';
 import { Store } from '@ngrx/store';
-import { getLoaderSuccess } from './common-ui/store/action/loader.action';
+import { getLoader, getLoaderSuccess } from './common-ui/store/action/loader.action';
 import { AsyncPipe, CommonModule } from '@angular/common';
 
 @Component({
@@ -31,7 +31,7 @@ export class AppComponent {
   public isLoading$ = this.store.select(preloaderSelector);
   constructor(private store: Store<AppStateInterfaces>) {}
 
-  ngAfterViewInit() {
+  ngOnInit() {
     setTimeout(()=> {
       this.store.dispatch(getLoaderSuccess())
     }, 5000)
