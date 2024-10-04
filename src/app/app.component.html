@@ -1,6 +1,6 @@
 <app-header class="header"></app-header>
 <div class="main-section">
-    <app-loader></app-loader>
+    <app-loader  *ngIf="isLoading$ | async"></app-loader>
     <router-outlet></router-outlet>
 </div>
 <app-footer class="footer"></app-footer>

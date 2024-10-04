@@ -14,15 +14,5 @@ import { CommonModule } from '@angular/common';
   templateUrl: './loader.component.html',
   styleUrl: './loader.component.scss'
 })
-export class LoaderComponent implements OnInit {
-
-  isLoading$: Observable<any>;
-
-  constructor(private store: Store<AppStateInterfaces>) {
-    this.isLoading$ = this.store.select(isLoadingSelector);
-  }
-
-  ngOnInit(): void {
-    this.store.dispatch(LoaderActions.getLoader());
-  }
+export class LoaderComponent {
 }

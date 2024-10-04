@@ -9,4 +9,4 @@ export class LoaderService {
     getLoader(): Observable<any> {
         return of({ isLoading: true });
     }
-}
+} 

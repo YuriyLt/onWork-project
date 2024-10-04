@@ -3,19 +3,19 @@ import { loaderStateInterface } from "../state/loaderState.interface";
 import * as LoaderActions from '../action/loader.action';
 
 export const initialState: loaderStateInterface = {
-    isLoading: false,
+    isLoading: true,
     error: null,
     loader: null,
 };
 
 export const LoaderReducers = createReducer(
     initialState,
-    on(LoaderActions.getLoader, (state) => ({...state, isLoading: true, error:null
+    on(LoaderActions.getLoader, (state) => ({
+        ...state,
+        isLoading: true
     })),
-    on(LoaderActions.getLoaderSuccess, (state, { loader }) => ({...state, isLoading: false, error: null
-    })),
-    on(LoaderActions.getLoaderFail, (state, { loader }) => ({...state, isLoading: false, error: loader
-    })),
-    on(LoaderActions.setLoading, (state, { isLoading }) => ({...state, isLoading
+    on(LoaderActions.getLoaderSuccess, (state) => ({
+        ...state,
+        isLoading: false
     }))
 )

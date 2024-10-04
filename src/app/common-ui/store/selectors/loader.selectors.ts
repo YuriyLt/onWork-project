@@ -1,6 +1,10 @@
-import { createSelector } from "@ngrx/store";
-import { AppStateInterfaces } from "../../../app-state-interfaces";
+import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { loaderStateInterface } from "../state/loaderState.interface";
 
-export const selectFeature = (state: AppStateInterfaces) => state.posts;
 
-export const isLoadingSelector = createSelector(selectFeature, (state) => state ? state.isLoading: false);
+export const isLoadingSelector = createFeatureSelector<loaderStateInterface>('posts');
+
+export const preloaderSelector = createSelector(
+    isLoadingSelector,
+    (posts: loaderStateInterface) => posts.isLoading
+)
