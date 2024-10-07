@@ -20,6 +20,6 @@ providers: [
       maxAge: 25,
       connectInZone: true
   }), 
-   ), provideAnimationsAsync(),
+   ), provideAnimationsAsync(), provideAnimationsAsync(),
   ]
 };

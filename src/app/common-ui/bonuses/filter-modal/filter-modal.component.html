@@ -1,31 +1,26 @@
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Write direct message to us
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+  Write direct message to us
 </button>
 <div class="modal" id="myModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-  
-        
-        <div class="modal-header">
-          <h4 class="modal-title">Write your message here and our managers will reach out to you!</h4>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" ></button>
-        </div>
-  
-       
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Choose casino(s)</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" >
+          <img src="../../../../assets/Vector.svg" alt="close Button">
+        </button>
+      </div>
       <div class="modal-body">
-        <form  action="">
-            <fieldset class="modal-form">
-              <input type="email" name="email" class="modalEmail" placeholder="Your email *" required>
-              <input type="text" name="Topic" class="modalTopic" placeholder="Topic"> 
-              <textarea class="modalMessage" name="Message" placeholder="Message *" required></textarea>
-              <div class="modal-checkbox">
-                <input type="checkbox" name="checkbox" id="modalCheckbox" class="modal-checkbox-ico" ngModel required>
-              <label class="modal-checkbox-label" for="modalCheckbox">I agree with the processing of my personal data.</label>
-              </div>
-              <input type="submit" value="Send message" class="sendMessageBtn">
-            </fieldset>
-        </form>
+        <div class="casinoCheckbox" *ngFor="let casino of filteredCasinos">
+          <mat-checkbox [(ngModel)]="selectedCasinos[casino.name]">
+            {{casino.name}} Casino
+          </mat-checkbox>
+        </div>
+        <div class="optionButtons">
+          <button (click)="clearFilters()">Clear Filters</button>
+          <button (click)="applyFilters()">Apply Filters</button>
+        </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>

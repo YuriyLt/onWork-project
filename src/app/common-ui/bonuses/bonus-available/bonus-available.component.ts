@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Casino, casinoes } from '../../../casino';
 import { CommonModule } from '@angular/common';
 
+ 
 @Component({
   selector: 'app-bonus-available',
   standalone: true,

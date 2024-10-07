@@ -13,6 +13,4 @@ import { TournamentsComponent } from '../tournaments/tournaments.component';
     '../footer/modal/modal.component.scss',
   ],
 })
-export class BonusesComponent {
-  email: string = "";
-}
+export class BonusesComponent {}
