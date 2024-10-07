@@ -1,7 +1,36 @@
+<div class="filter-modal">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+        Write direct message to us
+    </button>
+      
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Choose casino(s)</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" >
+                        <img src="../../../../assets/Vector.svg" alt="close Button">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="casinoCheckbox" *ngFor="let casino of casinoes">
+                        <mat-checkbox [(ngModel)]="selectedCasinos[casino.name]">
+                            {{casino.name}} Casino
+                        </mat-checkbox>
+                    </div>
+                <div class="optionButtons">
+                    <button (click)="clearFilters()">Clear Filters</button>
+                    <button (click)="applyFilters()">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <h2 class="available-header">Available Bonuses</h2>
 <div class="available-bg">
-    <div class="available" *ngFor="let casino of casinoes" ng-app="casinoesFilter" ng-controller="filterControls" >
-        <div class="available-visual">
+    <div class="available" *ngFor="let casino of filteredCasinos">
+        <div class="available-visual" >
             <div class="available-logo"><img [src]="casino.logo" alt="{{casino.name}}"></div>
             <div class="available-rating"><img [src]="casino.starRating" alt="{{casino.rating}}"></div>
         </div>
