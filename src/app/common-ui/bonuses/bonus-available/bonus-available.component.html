@@ -1,31 +1,45 @@
 <div class="filter-modal">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-        Write direct message to us
-    </button>
+    <div class="filterOpener">
+        <span>Casino Filter</span>
+        <div class="filterCounter">
+            <span class="filterValue">
+                <img src="../../../../assets/counterX.svg" alt="">
+            </span>
+        </div>
+        <button type="button" class="btn btn-primary btn-open-modal" data-bs-toggle="modal" data-bs-target="#myModal">
+            Write direct message to us
+        </button>
+    </div>
       
-    <div class="modal" id="myModal">
+    <div class="modal modal-font-family" id="myModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Choose casino(s)</h4>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" >
+                    <button type="button" class="btn-position btn-close" data-bs-dismiss="modal" >
                         <img src="../../../../assets/Vector.svg" alt="close Button">
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="casinoCheckbox" *ngFor="let casino of casinoes">
-                        <mat-checkbox [(ngModel)]="selectedCasinos[casino.name]">
+                @if (isFormLoaded) {
+                <form class="modal-body" [formGroup]="form" (ngSubmit)="OnSubmit()">
+                    <div class="casinoCheckbox">
+                        @for (casino of casinoes; track index; let index=$index) {
+                        <mat-checkbox labelPosition="before" class="modal-checkbox" [formControlName]="index">
                             {{casino.name}} Casino
                         </mat-checkbox>
+                        }
                     </div>
-                <div class="optionButtons">
-                    <button (click)="clearFilters()">Clear Filters</button>
-                    <button (click)="applyFilters()">Apply Filters</button>
-                </div>
+                    <div class="modalFooter">
+                        <div class="optionButtons">
+                            <button class="modalBtn" (click)="clearFilters()">Clear Filters</button>
+                            <button type="submit" class="modalBtn" data-bs-dismiss="modal" (click)="applyFilters()">Apply Filters</button>
+                        </div>
+                    </div>
+                </form>
+                }
             </div>
         </div>
     </div>
-</div>
 
 <h2 class="available-header">Available Bonuses</h2>
 <div class="available-bg">
@@ -34,22 +48,22 @@
             <div class="available-logo"><img [src]="casino.logo" alt="{{casino.name}}"></div>
             <div class="available-rating"><img [src]="casino.starRating" alt="{{casino.rating}}"></div>
         </div>
-    <div class="available-container" >
-        <h3>{{casino.bonusName}}</h3>
-        <ul>
-            <li>
-                <img src="../../../../assets/Package.svg" alt="">
-                <span>{{casino.bonusAmount}}</span>
-            </li>
-            <li>
-                <img src="../../../../assets/Package.svg" alt="">
-                <span>{{casino.bonusFreespins}}</span>
-            </li>
-            <li>
-                <img src="../../../../assets/Package.svg" alt="">
-                <span>{{casino.bonusMax}}</span>
-            </li>
-        </ul>
-        <button class="available-btn"><a [href]="casino.link">Claim Bonus</a></button>
+        <div class="available-container" >
+            <h3>{{casino.bonusName}}</h3>
+            <ul>
+                <li>
+                    <img src="../../../../assets/Package.svg" alt="">
+                    <span>{{casino.bonusAmount}}</span>
+                </li>
+                <li>
+                    <img src="../../../../assets/Package.svg" alt="">
+                    <span>{{casino.bonusFreespins}}</span>
+                </li>
+                <li>
+                    <img src="../../../../assets/Package.svg" alt="">
+                    <span>{{casino.bonusMax}}</span>
+                </li>
+            </ul>
+            <button class="available-btn"><a [href]="casino.link">Claim Bonus</a></button>
     </div>
 </div>

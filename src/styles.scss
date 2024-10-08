@@ -7,15 +7,22 @@ ul > li {
     --secondary-color: #A4AAF8;
     --accent-color: #FF7300;
     --bg-color: #151531;
-    --second-bg-color: #1C1B43;
+    --second-bg-color: #1C1B43; 
 }
 
 body {
     background-color: var(--bg-color);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: "Poppins", sans-serif !important;
+}
+
+.mat-typography {
+    font-family: "Poppins", sans-serif !important;
+}

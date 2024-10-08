@@ -105,3 +105,88 @@ h2 {
     margin-bottom: 20px;
 }
 
+.modal-header {
+    background-color: #343374;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.btn-close {
+    margin: 0;
+}
+
+.btn-position {
+    position: fixed;
+    left: 66%;
+}
+
+.modal-font-family {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.mdc-label {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.modal-dialog {
+    max-width: 720px;
+}
+
+.mdc-form-field {
+    justify-content: space-between !important;
+    width: 686px !important;
+    margin: 0 !important;
+}
+
+.mdc-form-field--align-end > label {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+
+.mat-mdc-checkbox {
+    width: 686px;
+}
+
+.modalBtn {
+    width: auto             ;
+    height: 44px;
+    border-radius: 32px;
+    border: none;
+    padding: 6px 24px;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+    background-color: #403F8E;
+}
+
+.optionButtons {
+    display: inline-flex;
+    gap: 50px;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: center;
+    background-color: #343374;
+    padding: 10px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.casinoCheckbox {
+    padding: 5px 20px;
+}
