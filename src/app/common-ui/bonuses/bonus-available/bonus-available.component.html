@@ -10,7 +10,7 @@
             Write direct message to us
         </button>
     </div>
-      
+
     <div class="modal modal-font-family" id="myModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -21,21 +21,24 @@
                     </button>
                 </div>
                 @if (isFormLoaded) {
-                <form class="modal-body" [formGroup]="form" (ngSubmit)="OnSubmit()">
-                    <div class="casinoCheckbox">
-                        @for (casino of casinoes; track index; let index=$index) {
-                        <mat-checkbox labelPosition="before" class="modal-checkbox" [formControlName]="index">
+                  <form class="modal-body" [formGroup]="form">
+                    <div formArrayName="params">
+                      <div class="casinoCheckbox">
+                        @for (casino of casinoes; track $index;) {
+                          <mat-checkbox labelPosition="before" class="modal-checkbox" [formControlName]="$index">
                             {{casino.name}} Casino
-                        </mat-checkbox>
+                          </mat-checkbox>
                         }
-                    </div>
-                    <div class="modalFooter">
+                      </div>
+                      <div class="modalFooter">
                         <div class="optionButtons">
-                            <button class="modalBtn" (click)="clearFilters()">Clear Filters</button>
-                            <button type="submit" class="modalBtn" data-bs-dismiss="modal" (click)="applyFilters()">Apply Filters</button>
+                          <button class="modalBtn" (click)="clearFilters()">Clear Filters</button>
+                          <button type="submit" class="modalBtn" data-bs-dismiss="modal" (click)="applyFilters()">Apply Filters</button>
                         </div>
+                      </div>
                     </div>
-                </form>
+
+                  </form>
                 }
             </div>
         </div>

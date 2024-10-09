@@ -1,11 +1,12 @@
-import { Component, OnInit, viewChild } from '@angular/core';
+import {AfterViewInit, Component, OnInit, viewChild} from '@angular/core';
 import { Casino, casinoes } from '../../../casino';
 import { CommonModule, NgFor } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from '../../footer/modal/modal.component';
+import e from "express";
 
- 
+
 @Component({
   selector: 'app-bonus-available',
   standalone: true,
@@ -14,13 +15,13 @@ import { ModalComponent } from '../../footer/modal/modal.component';
     MatCheckboxModule,
     FormsModule,
     ModalComponent,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     NgFor
   ],
   templateUrl: './bonus-available.component.html',
   styleUrl: './bonus-available.component.scss'
 })
-export class BonusAvailableComponent {
+export class BonusAvailableComponent implements AfterViewInit {
 
   public readonly casinoes: Casino[] = casinoes;
 
@@ -30,59 +31,59 @@ export class BonusAvailableComponent {
 
   public isFormLoaded: boolean = false;
 
+  selectedCasinos: { [key: string]: boolean} = {};
 
-
-
-  private addParamControl(param: any, initialValue: boolean = false): void {
-    const label: FormControl<boolean | null> = this.fb.control(initialValue, []);
-    if (label) this.control.push(label);
-  }
-  
+  filteredCasinos = [...this.casinoes];
 
   constructor (private fb: FormBuilder) {}
 
-  get control(): FormArray {
-    if(!this.form) {
-      return new FormArray<any>([]);
-    }
-    return this.form.get('params') as FormArray;
-  }
 
-  ngOnInit() {
-    this.form = this.fb.group({
-      params: this.fb.array([])
-    });
-    this.casinoes.forEach( casino => {
-      let initalValue = '';
 
-      this.addParamControl(casino.name, false)
-    });
-    console.log(this.form)
-    this.isFormLoaded = true;
+  private addParamControl(param: any, initialValue: boolean): void {
+    const label: FormControl<boolean | null> = this.fb.control(initialValue, []);
+    if (label) this.control.push(label);
     console.log(this.control)
   }
 
+
+  get control(): FormArray {
+    return this.form.get('params') as FormArray;
+  }
+
+  ngAfterViewInit() {
+    this.initForm().then(() => {
+      setTimeout(() => this.isFormLoaded = true, 2500)
+    });
+
+
+  }
+
+
+  private async initForm() {
+    try {
+      this.form = this.fb.group({
+        params: this.fb.array([])
+      });
+      this.casinoes.forEach(casino => {
+        this.addParamControl(casino.name, false)
+      });
+    } catch (e) {
+      console.error('Error initializing form:', e);
+      this.isFormLoaded = false;
+    }
+
+  }
   
-  OnSubmit(): void {
+  applyFilters() {
+    const indexes = this.control.controls
+      .map((control, index) => (control.value ? index : -1))
+      .filter(index => index !== -1);
+      console.log(indexes);
+
+    this.filteredCasinos = this.casinoes.filter((Casino, index) => indexes.includes(index));
     
   }
-
-
-
-
-
-
-
-
-
-  selectedCasinos: { [key: string]: boolean} = {};
-
-  filteredCasinos = [...casinoes];
-
-
-  applyFilters() {
-    this.filteredCasinos = this.casinoes.filter(casino => this.selectedCasinos[casino.name]);
-  }
+  
 
   clearFilters() {
     this.selectedCasinos = {};
