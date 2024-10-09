@@ -31,8 +31,6 @@ export class BonusAvailableComponent implements AfterViewInit {
 
   public isFormLoaded: boolean = false;
 
-  selectedCasinos: { [key: string]: boolean} = {};
-
   filteredCasinos = [...this.casinoes];
 
   constructor (private fb: FormBuilder) {}
@@ -42,7 +40,6 @@ export class BonusAvailableComponent implements AfterViewInit {
   private addParamControl(param: any, initialValue: boolean): void {
     const label: FormControl<boolean | null> = this.fb.control(initialValue, []);
     if (label) this.control.push(label);
-    console.log(this.control)
   }
 
 
@@ -86,7 +83,7 @@ export class BonusAvailableComponent implements AfterViewInit {
   
 
   clearFilters() {
-    this.selectedCasinos = {};
-    this.filteredCasinos = [...casinoes];
+    this.form.reset();
+    this.filteredCasinos = [...this.casinoes];
   }
 }
