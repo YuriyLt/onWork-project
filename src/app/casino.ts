@@ -15,12 +15,6 @@ export interface Casino {
     aboutOptionsDaily: string;
     aboutOptionsChat: string; 
     paymentHeading: string;
-    paymentRapid: string; 
-    paymentRevolut: string;
-    paymentAstropay: string; 
-    paymentDE: string; 
-    paymentCitadele: string;
-    paymentBitcoin: string; 
     bonusName: string;
     bonusAmount: string; 
     bonusFreespins: string; 
@@ -45,12 +39,6 @@ export const casinoes: Casino[] = [
         aboutOptionsDaily: 'Withdrawals up to 3000 EUR/day',
         aboutOptionsChat: 'Live chat 24/7', 
         paymentHeading: 'Payment methods',
-        paymentRapid: '../assets/rapid.svg',
-        paymentRevolut: '../assets/revolut.svg',
-        paymentAstropay: '../assets/astropay_payment.svg', 
-        paymentDE: '../assets/deposit-express.svg',
-        paymentCitadele: '../assets/citadele.svg',
-        paymentBitcoin: '../assets/bitcoin.svg',
         bonusName: 'Welcome Bonus Pack',
         bonusAmount: 'Up to 150% Bonus',
         bonusFreespins: '225 FreeSpins',
@@ -73,12 +61,6 @@ export const casinoes: Casino[] = [
         aboutOptionsDaily: 'Withdrawals up to 3000 EUR/day',
         aboutOptionsChat: 'Live chat 24/7',
         paymentHeading: 'Payment methods',
-        paymentRapid: '../assets/rapid.svg',
-        paymentRevolut: '../assets/revolut.svg',
-        paymentAstropay: '../assets/astropay_payment.svg', 
-        paymentDE: '../assets/deposit-express.svg',
-        paymentCitadele: '../assets/citadele.svg',
-        paymentBitcoin: '../assets/bitcoin.svg', 
         bonusName: 'Welcome Bonus Pack',
         bonusAmount: 'Up to 150% Bonus',
         bonusFreespins: '225 FreeSpins',
@@ -101,12 +83,6 @@ export const casinoes: Casino[] = [
         aboutOptionsDaily: 'Withdrawals up to 3000 EUR/day',
         aboutOptionsChat: 'Live chat 24/7', 
         paymentHeading: 'Payment methods',
-        paymentRapid: '../assets/rapid.svg',
-        paymentRevolut: '../assets/revolut.svg',
-        paymentAstropay: '../assets/astropay_payment.svg', 
-        paymentDE: '../assets/deposit-express.svg',
-        paymentCitadele: '../assets/citadele.svg',
-        paymentBitcoin: '../assets/bitcoin.svg',
         bonusName: 'Welcome Bonus Pack',
         bonusAmount: 'Up to 150% Bonus',
         bonusFreespins: '225 FreeSpins',
@@ -130,12 +106,6 @@ export const casinoes: Casino[] = [
         aboutOptionsDaily: 'Withdrawals up to 3000 EUR/day',
         aboutOptionsChat: 'Live chat 24/7',
         paymentHeading: 'Payment methods',
-        paymentRapid: '../assets/rapid.svg',
-        paymentRevolut: '../assets/revolut.svg',
-        paymentAstropay: '../assets/astropay_payment.svg', 
-        paymentDE: '../assets/deposit-express.svg',
-        paymentCitadele: '../assets/citadele.svg',
-        paymentBitcoin: '../assets/bitcoin.svg',
         bonusName: 'Welcome Bonus Pack',
         bonusAmount: 'Up to 150% Bonus',
         bonusFreespins: '225 FreeSpins',
