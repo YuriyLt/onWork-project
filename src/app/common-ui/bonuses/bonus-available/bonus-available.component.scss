@@ -107,6 +107,8 @@ h2 {
 
 .modal-header {
     background-color: #343374;
+    border: none !important;
+    border-radius: 0 !important;
 }
 
 .modal-title {
@@ -119,6 +121,13 @@ h2 {
     margin-bottom: 0;
 }
 
+.btn-open-modal {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
 .btn-close {
     margin: 0;
 }
@@ -126,35 +135,6 @@ h2 {
 .btn-position {
     position: fixed;
     left: 66%;
-}
-
-.modal-font-family {
-    font-family: "Poppins", sans-serif !important;
-}
-
-.mdc-label {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-}
-
-.modal-dialog {
-    max-width: 720px;
-}
-
-.mdc-form-field {
-    justify-content: space-between !important;
-    width: 686px !important;
-    margin: 0 !important;
-}
-
-.mdc-form-field--align-end > label {
-    margin-left: 0 !important;
-    margin-right: auto;
-}
-
-.mat-mdc-checkbox {
-    width: 686px;
 }
 
 .modalBtn {
@@ -187,6 +167,56 @@ h2 {
     padding: 0;
 }
 
-.casinoCheckbox {
+.materialCheckbox {
     padding: 5px 20px;
+}
+
+.materialCheckbox:not(:first-child) {
+    border-top: 1px solid #6f6ebd80 !important;
+}
+
+.casinoCheckbox {
+    background-color: #4E4CAF;
+}
+
+.filterOpener {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 338px;
+    height: 60px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #343374;
+    color: #fff;
+    position: absolute;
+    top: 290px;
+    right: 200px;
+}
+
+.casinoFilterCounter {
+    display: inline-flex;
+    align-items: center;
+}
+
+.casinoFilterCounter > span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.filterCounter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #1C1B43;
+    padding: 4px 8px;
+    border-radius: 15px;
+    width: 44px;
+    height: 22px;
+    margin-left: 10px;
+}
+
+.available-header {
+    margin-top: 50px;
 }

@@ -1,0 +1,28 @@
+.modal-font-family {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.mdc-label {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.modal-dialog {
+    max-width: 720px;
+}
+
+.mdc-form-field {
+    justify-content: space-between !important;
+    width: 686px !important;
+    margin: 0 !important;
+}
+
+.mdc-form-field--align-end > label {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+
+.mat-mdc-checkbox {
+    width: 686px;   
+}

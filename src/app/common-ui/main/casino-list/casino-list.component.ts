@@ -42,8 +42,11 @@ import { Casino, casinoes } from '../../../casino';
         </ul>
       </div>
       <div class="paymentSection">
-        <h2>{{casino.paymentHeading}}</h2>
-        <a href="" class="paymentSection-showmore">Show more</a>
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <h2 class="text-white">{{casino.paymentHeading}}</h2>
+          <a href="" class="paymentSection-showmore">Show more</a>
+        </div>
+        
         <ul class="paymentMethods">
           <li><img [src]="casino.paymentRapid" alt="Rapid" class="paymentBank"></li>
           <li><img [src]="casino.paymentRevolut" alt="Revolut" class="paymentBank"></li>

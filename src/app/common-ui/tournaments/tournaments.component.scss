@@ -33,14 +33,16 @@
     flex-direction: column;
     align-items: center;
     width: 338px;
-    height: 373px;
+    height: auto;
     color: #fff;
     font-size: 18px;
     line-height: 27px;
     background-color: var(--second-bg-color);
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 22px;
     margin-bottom: 50px;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
 
 .tournament:nth-child(4n) {
@@ -80,6 +82,7 @@
 }
 
 .btn-more {
+    display: flex;
     color: #fff;
     font-weight: 600;
     font-size: 18px;
@@ -91,4 +94,6 @@
     height: 47px;
     background-color: #5C67ED;
     margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }

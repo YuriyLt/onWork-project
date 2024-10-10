@@ -17,10 +17,7 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   constructor (private router: Router) {} 
 
-  ngOnInit(): void {
-  }
-
-  navClick() {
-    this.router.navigate(['Home']);
+  public navClick(): void {
+    this.router.navigate(['Home'])
   }
 }

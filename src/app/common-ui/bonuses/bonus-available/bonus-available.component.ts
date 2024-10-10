@@ -4,8 +4,6 @@ import { CommonModule, NgFor } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from '../../footer/modal/modal.component';
-import e from "express";
-
 
 @Component({
   selector: 'app-bonus-available',
@@ -19,7 +17,10 @@ import e from "express";
     NgFor
   ],
   templateUrl: './bonus-available.component.html',
-  styleUrl: './bonus-available.component.scss'
+  styleUrls: [
+    './bonus-available.component.scss',
+    '../../../../overwrited.styles.scss'  
+  ] 
 })
 export class BonusAvailableComponent implements AfterViewInit {
 
@@ -27,15 +28,11 @@ export class BonusAvailableComponent implements AfterViewInit {
 
   public form: FormGroup = new FormGroup({});
 
-  private formParams: any[] = [];
-
   public isFormLoaded: boolean = false;
 
   filteredCasinos = [...this.casinoes];
 
   constructor (private fb: FormBuilder) {}
-
-
 
   private addParamControl(param: any, initialValue: boolean): void {
     const label: FormControl<boolean | null> = this.fb.control(initialValue, []);
@@ -49,10 +46,8 @@ export class BonusAvailableComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.initForm().then(() => {
-      setTimeout(() => this.isFormLoaded = true, 2500)
+      setTimeout(() => this.isFormLoaded = true, 500)
     });
-
-
   }
 
 
