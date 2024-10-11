@@ -1,43 +1,55 @@
-<!-- <div class="container">
-  <div class="casinoType" *ngFor="let casino of casinoes">
-    <div class="casino-container">
-        <div class="logo"><img [src]="casino.logo"></div>
-        <div class="rating">{{casino.rating}}</div>
-        <div class="starRating"><img [src]="casino.starRating"></div>
-        <div class="buttonVisit"><button>Visit casino</button></div>
+<h2 class='mainSectionHeading'>Top Casinos</h2>
+  <div class="position-container">
+    <div class="container" *ngFor="let casino of casinoes">
+      <div class="casinoType">
+        <div class="casino-container">
+          <div class="logo"><img [src]="casino.logo"></div>
+          <div class="ratings">
+            <div class="rating">{{casino.rating}}</div>
+            <div class="starRating"><img width="70px" height="13px" [src]="casino.starRating"></div>
+          </div>
+          <div class="buttonVisit"><button><a [href]="casino.link">Visit casino</a></button></div>
+        </div>
       </div>
-  </div>
-  <div class="aboutCasino" *ngFor="let casino of casinoes">
-    <h2>{{casino.aboutHeading}}</h2>
-    <ul>
-        <li>
-            <img src="" alt="">
+      <div class="aboutCasino">
+        <h2>{{casino.aboutHeading}}</h2>
+        <ul>
+          <li>
+            <img width="17px" height="18px" src="../../assets/bonuss.svg" alt="">
             <span>{{casino.aboutOptionsBonuss}}</span>
-        </li>
-        <li>
-            <img src="" alt="">
+          </li>
+          <li>
+            <img width="17.5px" height="17.5px" src="../../assets/clock.svg" alt="">
             <span>{{casino.aboutOptionsWithdraw}}</span>
-        </li>
-        <li>
-            <img src="" alt="">
+          </li>
+          <li>
+            <img width="20px" height="20px" src="../../assets/withdraw.svg" alt="">
             <span>{{casino.aboutOptionsDaily}}</span>
-        </li>
-        <li>
-            <img src="" alt="">
+          </li>
+          <li>
+            <img width="16px" height="16px" src="../../assets/chat.svg" alt="">
             <span>{{casino.aboutOptionsChat}}</span>
-        </li>
-    </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="paymentSection">
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <h2 class="text-white">{{casino.paymentHeading}}</h2>
+          <button (click)="allPayments()" class="paymentsBtn">Show {{ showMore ? 'less' : 'more' }}</button>
+        </div>
+        <div class="paymentMethods  col-10 justify-content-between">
+          @if (shownPayments.length > -1) {
+            @for (payment of shownPayments; track payment.name; let index = $index) { 
+              <div class="paymentMethod d-flex justify-content-center align-items-center">
+                <img [src]="payment.logo" [alt]="payment.name">
+              </div>
+              }
+            } @else {
+              <div class="noPayments">
+                <span>There's no available payments</span>
+              </div>
+            }
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="paymentSection" *ngFor="let casino of casinoes">
-    <h2>{{casino.paymentHeading}}</h2>
-    <ul>
-        <li><img [src]="casino.paymentRapid" alt="Rapid"></li>
-        <li>{{casino.paymentRevolut}}</li>
-        <li>{{casino.paymentAstropay}}</li>
-        <li>{{casino.paymentDE}}</li>
-        <li>{{casino.paymentCitadele}}</li>
-        <li>{{casino.paymentBitcoin}}</li>
-    </ul>
-  </div>
-</div> -->
-
