@@ -36,7 +36,7 @@
                       <div class="modalFooter">
                         <div class="optionButtons">
                           <button class="modalBtn" data-bs-dismiss="modal" (click)="clearFilters()">Clear Filters</button>
-                          <button class="modalBtn" data-bs-dismiss="modal" (click)="applyFilters()">Apply Filters</button>
+                          <button type="submit" class="modalBtn" data-bs-dismiss="modal" (click)="applyFilters()">Apply Filters</button>
                         </div>
                       </div>
                     </div>
@@ -70,6 +70,6 @@
                     <span>{{casino.bonusMax}}</span>
                 </li>
             </ul>
-            <button class="available-btn"><a [href]="casino.link">Claim Bonus</a></button>
+            <button class="available-btn"><a [href]="casino.link">Claim Your Bonus</a></button>
     </div>
 </div>

@@ -1,10 +1,9 @@
-import { AfterViewInit, Component } from '@angular/core';
+import {AfterViewInit, Component, OnInit, viewChild} from '@angular/core';
 import { Casino, casinoes } from '../../../casino';
 import { CommonModule, NgFor } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from '../../footer/modal/modal.component';
-
 
 @Component({
   selector: 'app-bonus-available',
@@ -18,14 +17,20 @@ import { ModalComponent } from '../../footer/modal/modal.component';
     NgFor
   ],
   templateUrl: './bonus-available.component.html',
-  styleUrl: './bonus-available.component.scss'
+  styleUrls: [
+    './bonus-available.component.scss',
+    '../../../../overwrited.styles.scss'  
+  ] 
 })
 export class BonusAvailableComponent implements AfterViewInit {
 
   public readonly casinoes: Casino[] = casinoes;
+
   public form: FormGroup = new FormGroup({});
+
   public isFormLoaded: boolean = false;
-  public filteredCasinos = [...this.casinoes];
+
+  filteredCasinos = [...this.casinoes];
 
   constructor (private fb: FormBuilder) {}
 
@@ -34,15 +39,17 @@ export class BonusAvailableComponent implements AfterViewInit {
     if (label) this.control.push(label);
   }
 
+
   get control(): FormArray {
     return this.form.get('params') as FormArray;
   }
 
   ngAfterViewInit() {
     this.initForm().then(() => {
-      this.isFormLoaded = true
+      setTimeout(() => this.isFormLoaded = true, 500)
     });
   }
+
 
   private async initForm() {
     try {
@@ -56,6 +63,7 @@ export class BonusAvailableComponent implements AfterViewInit {
       console.error('Error initializing form:', e);
       this.isFormLoaded = false;
     }
+
   }
   
   applyFilters() {
@@ -64,9 +72,11 @@ export class BonusAvailableComponent implements AfterViewInit {
       .filter(index => index !== -1);
       console.log(indexes);
 
-    this.filteredCasinos = this.casinoes.filter((casino, index) => indexes.includes(index)); 
+    this.filteredCasinos = this.casinoes.filter((Casino, index) => indexes.includes(index));
+    
   }
   
+
   clearFilters() {
     this.form.reset();
     this.filteredCasinos = [...this.casinoes];
