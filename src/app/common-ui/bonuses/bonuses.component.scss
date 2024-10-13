@@ -7,13 +7,6 @@
     margin-right: auto;
 }
 
-.h2 {
-    color: #A4AAF8;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36.6px;
-}
-
 .btn-seemore {
     margin-left: calc((100% - 147px)/2);
     color: #fff;
@@ -28,4 +21,52 @@
     background-color: #5C67ED;
     margin-top: 30px;
     margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2 {
+    color: #A4AAF8;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36.6px;
+}
+
+.bonus-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27.45px;
+    color: #fff;
+}
+
+.bonus-btns {
+    display: inline-flex;
+}
+
+.bonus-btn {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    width: 156px;
+    height: 47px;
+    border: 2px solid #F7780F;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.bonus-view {
+    margin-right: 20px;
+}
+
+.align-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    width: auto;
+    margin-left: 150px;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-left: 30px;
 }

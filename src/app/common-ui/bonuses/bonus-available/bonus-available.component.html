@@ -1,13 +1,14 @@
 <div class="filter-modal">
     <div class="filterOpener">
-        <span>Casino Filter</span>
-        <div class="filterCounter">
-            <span class="filterValue">
-                <img src="../../../../assets/counterX.svg" alt="">
-            </span>
+        <div class="casinoFilterCounter">
+            <span>Casino Filter</span>
+            <div class="filterCounter">
+                <span>2</span>
+                <img src="../../../../assets/counterX.svg" alt="increment">
+            </div>
         </div>
         <button type="button" class="btn btn-primary btn-open-modal" data-bs-toggle="modal" data-bs-target="#myModal">
-            Write direct message to us
+            <img src="../../../../assets/dropdown.svg" alt="open Filter">
         </button>
     </div>
 
@@ -16,18 +17,20 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Choose casino(s)</h4>
-                    <button type="button" class="btn-position btn-close" data-bs-dismiss="modal" >
-                        <img src="../../../../assets/Vector.svg" alt="close Button">
-                    </button>
+                    <button type="button" class="btn-position btn-close" data-bs-dismiss="modal" ></button>
                 </div>
                 @if (isFormLoaded) {
                   <form class="modal-body" [formGroup]="form">
                     <div formArrayName="params">
                       <div class="casinoCheckbox">
                         @for (casino of casinoes; track $index;) {
-                          <mat-checkbox labelPosition="before" class="modal-checkbox" [formControlName]="$index">
-                            {{casino.name}} Casino
-                          </mat-checkbox>
+                          <div class="materialCheckbox">
+                            <div>
+                              <mat-checkbox labelPosition="before" class="modal-checkbox" [formControlName]="$index">
+                                {{casino.name}} Casino
+                              </mat-checkbox>
+                            </div>
+                          </div>
                         }
                       </div>
                       <div class="modalFooter">

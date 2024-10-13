@@ -34,6 +34,6 @@ export class AppComponent {
   ngOnInit() {
     setTimeout(()=> {
       this.store.dispatch(getLoaderSuccess())
-    }, 2500)
+    }, 500)
   }
 }

@@ -1,14 +1,14 @@
 <h2 class='mainSectionHeading'>Top Casinos</h2>
   <div class="position-container">
     <div class="container" *ngFor="let casino of casinoes">
-    <div class="casinoType">
-      <div class="casino-container">
-        <div class="logo"><img [src]="casino.logo"></div>
-        <div class="ratings">
-        <div class="rating">{{casino.rating}}</div>
-        <div class="starRating"><img width="70px" height="13px" [src]="casino.starRating"></div>
-        </div>
-        <div class="buttonVisit"><button><a [href]="casino.link">Visit casino</a></button></div>
+      <div class="casinoType">
+        <div class="casino-container">
+          <div class="logo"><img [src]="casino.logo"></div>
+          <div class="ratings">
+            <div class="rating">{{casino.rating}}</div>
+            <div class="starRating"><img width="70px" height="13px" [src]="casino.starRating"></div>
+          </div>
+          <div class="buttonVisit"><button><a [href]="casino.link">Visit casino</a></button></div>
         </div>
       </div>
       <div class="aboutCasino">
@@ -33,15 +33,23 @@
         </ul>
       </div>
       <div class="paymentSection">
-        <h2>{{casino.paymentHeading}}</h2>
-        <button (click)="expandPayments()">Show more</button>
-        <ul class="paymentMethods">
-          @for (payment of payments; track paymentIndex) {
-            <li>
-              <a href=""><img [src]="payment.logo" alt="{{payment.name}}" class="paymentBank"></a>
-            </li>
-          }
-        </ul>
+        <div class="d-flex align-items-center justify-content-between w-100">
+          <h2 class="text-white">{{casino.paymentHeading}}</h2>
+          <button (click)="allPayments()" class="paymentsBtn">Show {{ showMore ? 'less' : 'more' }}</button>
+        </div>
+        <div class="paymentMethods  col-10 justify-content-between">
+          @if (shownPayments.length > -1) {
+            @for (payment of shownPayments; track payment.name; let index = $index) { 
+              <div class="paymentMethod d-flex justify-content-center align-items-center">
+                <img [src]="payment.logo" [alt]="payment.name">
+              </div>
+              }
+            } @else {
+              <div class="noPayments">
+                <span>There's no available payments</span>
+              </div>
+            }
+        </div>
       </div>
     </div>
   </div>

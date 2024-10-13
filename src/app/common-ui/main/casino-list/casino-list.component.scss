@@ -23,9 +23,8 @@
   display: grid;
   justify-content: space-between;
   width: 774px;
-  height: 302px;
   grid-template-columns: 132px 570px;
-  grid-template-rows: 177px 65px;
+  grid-template-rows: 177px auto;
   gap: 16px 0;
   grid-auto-flow: row;
   grid-template-areas:
@@ -73,15 +72,6 @@
 
 .paymentSection { 
   grid-area: paymentSection;
-  display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-auto-rows: 1fr; 
-  grid-template-columns: 151px 80px; 
-  grid-template-rows: 24px 29px; 
-  gap: 12px 338px; 
-  grid-template-areas: 
-    "h2 paymentSection-showmore"
-    "paymentMethods paymentMethods";
  }
 
  .paymentSection > h2 {
@@ -100,13 +90,7 @@
   text-decoration: none;
  }
 
- .paymentMethods {
-  grid-area: paymentMethods;
-  display: inline-flex;
-  justify-content: space-between;
-  padding: 0;
- }
-
+ 
 .casino-container {  
   display: grid;
   grid-template-columns: 132px;
@@ -164,4 +148,29 @@
 .buttonVisit > button > a {
   text-decoration: none;
   color: #151531;
+}
+
+.paymentsBtn {
+  width: 80px;
+  height: 21px;
+  background-color: transparent;
+  color: #1885E9 ;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-wrap: nowrap;
+  border: none;
+}
+
+.paymentMethod {
+  background-color: #21215E;
+  border-radius: 22px;
+  width: 76px;
+  height: 29px;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
 }
