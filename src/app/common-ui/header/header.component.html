@@ -12,5 +12,22 @@
                 <a class="routerLink" routerLink="Bonuses & Tournaments" routerLinkActive="active">Bonuses & Tournament</a>
             </li>
         </ul>
+        @if(!isMenuOpen) {
+        <button class="pop-up-btn" type="button" (click)="openPop()" >
+            <img src="../../../assets/pop-upMenu.svg" alt="Open pop-up Menu">
+        </button>
+    }
+        <div class="popup-menu" >
+            <div class="nav-menu overflow-hidden" [@openClose]="isMenuOpen ? 'open' : 'close'">
+                <div class="p-3">
+                    <button type="button"><img src="../../../assets/Vector.svg" alt="close menu" (click)="closePop()"></button>
+                    <div class="pop-up-link">Home</div>
+                    <div class="pop-up-link">Casinos</div>
+                    <div class="pop-up-link">Bonuses & Totnaments</div>
+                </div>
+                
+            </div>
+        </div>
+    
     </div>
 </header>
