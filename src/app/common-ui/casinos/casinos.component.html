@@ -38,20 +38,5 @@
               </ul>
           </div>
       </div>
-      <h3>Recommended Casinos</h3>
-      <ul>
-          @for (casino of casinoes; track $index;) {
-              <li>
-                  <ul class="sublist">
-                      <li><img [src]="casino.logo" alt="{{casino.name}}"></li>
-                      <li>{{casino.name}}</li>
-                      <li>{{casino.rating}}</li>
-                      <li><img [src]="casino.starRating" alt="StarRating"></li>
-                      <li>{{casino.desc}}</li>
-                  </ul>
-              </li>
-          }
-          
-        </ul>
-        <button (click)="showMore()" class="rec-btn">See more</button>
+      <app-recommended-list/>
     </article>

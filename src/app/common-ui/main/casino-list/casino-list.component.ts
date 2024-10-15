@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Casino, casinoes } from '../../../casino';
 import { Payment, payments } from '../../../payment';
@@ -13,7 +13,7 @@ import { casinoesService } from '../../../casinoes.service';
     './casino-list.component.scss',
   ]
 })
-export class CasinoListComponent {
+export class CasinoListComponent implements OnInit {
   public casinoes: Casino[] = this.OpCasinoes.casinoes;
   public payments: Payment[] = payments;
   public shownPayments = [...this.payments];
