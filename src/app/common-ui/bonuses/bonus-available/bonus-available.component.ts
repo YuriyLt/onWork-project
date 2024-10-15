@@ -4,6 +4,7 @@ import { CommonModule, NgFor } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from '../../footer/modal/modal.component';
+import { casinoesService } from '../../../casinoes.service';
 
 @Component({
   selector: 'app-bonus-available',
@@ -24,7 +25,7 @@ import { ModalComponent } from '../../footer/modal/modal.component';
 })
 export class BonusAvailableComponent implements AfterViewInit {
 
-  public readonly casinoes: Casino[] = casinoes;
+  public readonly casinoes: Casino[] = this.OpCasinoes.casinoes;
 
   public form: FormGroup = new FormGroup({});
 
@@ -32,7 +33,7 @@ export class BonusAvailableComponent implements AfterViewInit {
 
   filteredCasinos = [...this.casinoes];
 
-  constructor (private fb: FormBuilder) {}
+  constructor (private fb: FormBuilder, private OpCasinoes: casinoesService) {}
 
   private addParamControl(param: any, initialValue: boolean): void {
     const label: FormControl<boolean | null> = this.fb.control(initialValue, []);

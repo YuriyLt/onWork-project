@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Casino, casinoes } from '../../../casino';
+import { Casino } from '../../../casino';
 import { NgFor } from '@angular/common';
+import { casinoesService } from '../../../casinoes.service';
 
 @Component({
   selector: 'app-recommended-list',
@@ -12,5 +13,7 @@ import { NgFor } from '@angular/common';
 })
 
 export class RecommendedListComponent {
-  casinoes: Casino[] = casinoes;
+  casinoes: Casino[] = this.OpCasinoes.casinoes;
+
+  constructor(private OpCasinoes: casinoesService) {}
 }

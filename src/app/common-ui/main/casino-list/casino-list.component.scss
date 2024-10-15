@@ -2,7 +2,7 @@
   display: flex;
   color: #fff;
   justify-content: center;
-  width: 1600px;
+  width: 100%;
   margin-bottom: 80px;
   font-weight: 600;
   font-size: 24px;
@@ -11,7 +11,7 @@
 
 .position-container {
   display: flex; 
-  width: 1570px;
+  width: 100%;
   flex-wrap: wrap;
 } 
 
@@ -22,7 +22,7 @@
 .container {  
   display: grid;
   justify-content: space-between;
-  width: 774px;
+  width: calc((100% - 52px)/2);
   grid-template-columns: 132px 570px;
   grid-template-rows: 177px auto;
   gap: 16px 0;
