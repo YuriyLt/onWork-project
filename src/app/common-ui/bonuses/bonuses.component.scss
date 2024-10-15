@@ -1,4 +1,10 @@
+.bn-cnt {
+    width: 1600px;
+    margin: auto;
+}
+
 .bonus-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,11 +68,35 @@ h2 {
 .align-left {
     display: flex;
     flex-direction: column;
+    align-self: baseline;
     gap: 30px;
-    align-items: flex-start;
-    width: auto;
-    margin-left: 150px;
-    margin-right: auto;
     margin-top: 50px;
-    padding-left: 30px;
+}
+
+@media (max-width: 1599px) {
+    .bn-cnt {
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 1479px) {
+    .bonus-container {
+        align-items: center;
+    }
+
+    .align-left {
+        margin-bottom: 130px;
+        align-self: center;
+        align-items: center;
+    }
+
+    .align-left > h2 {
+        margin: 0;
+    }
+
+    .align-left > span {
+        text-align: center;
+    }
 }

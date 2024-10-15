@@ -50,6 +50,7 @@ header {
     top: 25px;
     right: 0;
     margin-right: 12%;
+    padding: 10px;
 }
 
 .nav-menu {
@@ -115,20 +116,5 @@ header {
 
     .page-navigation {
         display: none;
-    }
-}
-
-@media (max-width: 1200px) {
-    // .page-header {
-    //     padding: 25px;
-    // }
-
-    .pop-up-btn {
-        position: absolute;
-        top: 25px;
-    }
-
-    .nav-menu {
-        transform: translate(-100%, -25%);
     }
 }

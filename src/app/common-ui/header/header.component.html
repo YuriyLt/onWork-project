@@ -3,7 +3,7 @@
         <img class="page-logo" src="../../../assets/3betup_logo 1.svg" alt="3betup_logo">
         <ul class="page-navigation">
             <li class="navigation-list">
-                <a class="routerLink" (click)="navClick()" routerLinkActive="active">Home</a>
+                <a class="routerLink" routerLink="Home" routerLinkActive="active">Home</a>
             </li>
             <li class="navigation-list">
                 <a class="routerLink" routerLink="Casinos" routerLinkActive="active">Casinos</a>
@@ -20,14 +20,12 @@
         <div class="popup-menu" >
             <div class="nav-menu overflow-hidden" [@openClose]="isMenuOpen ? 'open' : 'close'">
                 <div class="p-3">
-                    <button type="button"><img src="../../../assets/Vector.svg" alt="close menu" (click)="closePop()"></button>
-                    <div class="pop-up-link">Home</div>
-                    <div class="pop-up-link">Casinos</div>
-                    <div class="pop-up-link">Bonuses & Totnaments</div>
+                    <button class="pop-up-btn" type="button"><img src="../../../assets/Vector.svg" alt="close menu" (click)="closePop()"></button>
+                    <div (click)="navClickHome()" class="pop-up-link">Home</div>
+                    <div (click)="navClickCasinos()" class="pop-up-link">Casinos</div>
+                    <div (click)="navClickBonuses()" class="pop-up-link">Bonuses & Totnaments</div>
                 </div>
-                
             </div>
         </div>
-    
     </div>
 </header>

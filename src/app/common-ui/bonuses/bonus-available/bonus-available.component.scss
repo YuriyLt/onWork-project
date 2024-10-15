@@ -189,8 +189,15 @@ h2 {
     background-color: #343374;
     color: #fff;
     position: absolute;
-    top: 290px;
-    right: 200px;
+    top: 305px;
+    right: 160px;
+}
+
+@media (max-width: 1479px) {
+    .filterOpener {
+        top: 420px;
+        right: 38.5%;
+    }
 }
 
 .casinoFilterCounter {

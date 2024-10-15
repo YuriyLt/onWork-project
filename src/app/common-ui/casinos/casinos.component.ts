@@ -8,11 +8,6 @@ import { RecommendedListComponent } from "../main/recommended-list/recommended-l
   standalone: true,
   imports: [NgFor, CommonModule, RecommendedListComponent],
   templateUrl: './casinos.component.html',
-  styleUrls: [
-    './casinos.component.scss', 
-    '../main/recommended-list/recommended-list.component.scss',
-    '../main/main.component.scss'
-  ]
-
+  styleUrl: './casinos.component.scss',
 })
 export class CasinosComponent {}

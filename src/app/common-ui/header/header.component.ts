@@ -38,8 +38,16 @@ export class HeaderComponent {
 
   constructor (private router: Router) {} 
 
-  public navClick(): void {
+  public navClickHome(): void {
     this.router.navigate(['Home'])
+  }
+
+  public navClickCasinos(): void {
+    this.router.navigate(['Casinos'])
+  }
+
+  public navClickBonuses(): void {
+    this.router.navigate(['Bonuses & Tournaments'])
   }
 
   public openPop(): void {

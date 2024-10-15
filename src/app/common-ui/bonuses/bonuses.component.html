@@ -1,13 +1,15 @@
-<div class="bonus-container">
-    <div class="align-left">
-        <h2 class="bonus-header">Bonuses and Tournaments</h2>
-        <span class="bonus-desc">Looking for the best bonus to spice up your gambling? <br> Say no more 3BetUp team is already gathered the best offers in the list below</span>
-        <div class="bonus-btns">
-            <button class="bonus-view bonus-btn">View Bonuses</button>
-            <button class="bonus-tour bonus-btn">Tournamnets</button>
+<div class="bn-cnt">
+    <div class="bonus-container">
+        <div class="align-left">
+            <h2 class="bonus-header">Bonuses and Tournaments</h2>
+            <span class="bonus-desc">Looking for the best bonus to spice up your gambling? <br> Say no more 3BetUp team is already gathered the best offers in the list below</span>
+            <div class="bonus-btns">
+                <button class="bonus-view bonus-btn">View Bonuses</button>
+                <button class="bonus-tour bonus-btn">Tournamnets</button>
+            </div>
         </div>
+        <app-bonus-available></app-bonus-available>
+        <button class="btn-seemore" (click)="moreBonuses()">See more</button>
+        <app-tournaments></app-tournaments>
     </div>
-    <app-bonus-available></app-bonus-available>
-    <button class="btn-seemore" (click)="moreBonuses()">See more</button>
-    <app-tournaments></app-tournaments>
 </div>
