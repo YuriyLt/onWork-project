@@ -3,7 +3,7 @@
         <div class="casinoFilterCounter">
             <span>Casino Filter</span>
             <div class="filterCounter">
-                <span>2</span>
+                <span>{{ filteredCasinos().length }}</span>
                 <img src="../../../../assets/counterX.svg" alt="increment">
             </div>
         </div>
@@ -26,7 +26,8 @@
                         @for (casino of casinoes; track $index;) {
                           <div class="materialCheckbox">
                             <div>
-                              <mat-checkbox labelPosition="before" class="modal-checkbox" [formControlName]="$index">
+                              <mat-checkbox labelPosition="before" class="modal-checkbox" [formControlName]="$index" [checked]="selectedCasinos()[$index]" 
+                              (change)="toggleCasino($index)">
                                 {{casino.name}} Casino
                               </mat-checkbox>
                             </div>
@@ -49,7 +50,7 @@
 
 <h2 class="available-header">Available Bonuses</h2>
 <div class="available-bg">
-    <div class="available" *ngFor="let casino of filteredCasinos">
+    <div class="available" *ngFor="let casino of filteredCasinos()">
         <div class="available-visual" >
             <div class="available-logo"><img [src]="casino.logo" alt="{{casino.name}}"></div>
             <div class="available-rating"><img [src]="casino.starRating" alt="{{casino.rating}}"></div>
