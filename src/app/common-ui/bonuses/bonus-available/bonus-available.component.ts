@@ -5,7 +5,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from '../../footer/modal/modal.component';
 import { casinoesService } from '../../../casinoes.service';
-import { SIGNAL } from '@angular/core/primitives/signals';
 
 @Component({
   selector: 'app-bonus-available',
@@ -23,84 +22,46 @@ import { SIGNAL } from '@angular/core/primitives/signals';
     '../../../../overwrited.styles.scss'  
   ] 
 })
-export class BonusAvailableComponent {
+export class BonusAvailableComponent implements OnInit {
 
   public readonly casinoes: Casino[] = this.OpCasinoes.casinoes;
   public form: FormGroup = new FormGroup({});
-  public isFormLoaded: boolean = false;
+  public isFormLoaded: boolean = true;
+  public filteredCasinos: any = [...this.OpCasinoes.casinoes];
+  public isFiltered: boolean = true;
 
   selectedCasinos = signal<boolean[]>(Array(this.casinoes.length).fill(false));
 
-  filteredCasinos = computed(() => {
-    return this.casinoes.filter((_, index) => this.selectedCasinos()[index]);
-  });
+  constructor(private OpCasinoes: casinoesService, private fb: FormBuilder ) {}
 
-  constructor(private OpCasinoes: casinoesService) {}
-
-  toggleCasino(index: number): void {
-    const updatedSelection = [...this.selectedCasinos()];
-    updatedSelection[index] = !updatedSelection[index];
-    this.selectedCasinos.set(updatedSelection);
+  ngOnInit(): void {
+    this.filteredCasinos = computed(() => {
+      return this.casinoes.concat();
+    });
   }
 
-  applyFilters() {
-    // const indexes = this.control.controls
-    //   .map((control, index) => (control.value ? index : -1))
-    //   .filter(index => index !== -1);
-    //   console.log(indexes);
-
-    // this.filteredCasinos = this.casinoes.filter((Casino, index) => indexes.includes(index));
-    
-  }
-
-  clearFilters(): void {
-    this.selectedCasinos.set(Array(this.casinoes.length).fill(false));
-  }
-
-  // public readonly casinoes: Casino[] = this.OpCasinoes.casinoes;
-
-    
-
-  // filteredCasinos = [...this.casinoes];
-
-  // constructor (private fb: FormBuilder, private OpCasinoes: casinoesService) {}
-
-  // private addParamControl(param: any, initialValue: boolean): void {
-  //   const label: FormControl<boolean | null> = this.fb.control(initialValue, []);
-  //   if (label) this.control.push(label);
-  // }
-
-
-  // get control(): FormArray {
-  //   return this.form.get('params') as FormArray;
-  // }
-
-  // ngAfterViewInit() {
-  //   this.initForm().then(() => {
-  //     setTimeout(() => this.isFormLoaded = true, 500)
+  //  openModal() {
+  //   this.filteredCasinos = computed(() => {
+  //     return this.casinoes.filter((_, index) => this.selectedCasinos()[index]);
   //   });
   // }
 
+  toggleCasino(index: number): void {
+    const updatedCasinoes = [...this.selectedCasinos()];
+    updatedCasinoes[index] = !updatedCasinoes[index];
+    this.selectedCasinos.set(updatedCasinoes);
+  }
 
-  // private async initForm() {
-  //   try {
-  //     this.form = this.fb.group({
-  //       params: this.fb.array([])
-  //     });
-  //     this.casinoes.forEach(casino => {
-  //       this.addParamControl(casino.name, false)
-  //     });
-  //   } catch (e) {
-  //     console.error('Error initializing form:', e);
-  //     this.isFormLoaded = false;
-  //   }
+  applyFilters() {
+    this.filteredCasinos = computed(() => {
+      return this.casinoes.filter((_, index) => this.selectedCasinos()[index]);
+    });
+  }
 
-  // }
-  
-  
-
-  // clearFilters() {
-  //   this.form.reset();
-  //   this.filteredCasinos = [...this.casinoes];
-  // }
+  clearFilters(): void {
+    this.filteredCasinos = computed(() => {
+      return this.casinoes.concat();
+    });
+    this.selectedCasinos.set(Array(this.casinoes.length).fill(false));
+  }
 }

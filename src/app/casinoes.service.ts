@@ -6,7 +6,7 @@ import { Casino } from './casino';
 })
 export class casinoesService {
 
-  public readonly casinoes: Casino[] = [
+  public casinoes: Casino[] = [
     { 
         logo: "../../../../assets/RoySpins.svg", 
         name: 'Royspins', 
