@@ -69,10 +69,14 @@
 }
 
 @media (max-width: 1599px) {
+    .recommended {
+        width: calc(100% - 200px);
+        margin-left: 100px;
+        margin-right: 100px;
+    } 
+
     .main-info {
-        width: 100%
-        // margin-left: 100px;
-        // margin-right: 100px;
+        width: 100%;
     }
 
     .text-center {
@@ -86,6 +90,7 @@
         width: 100%;
         padding-left: 10%;
         padding-right: 10%;
+        margin: auto;
     }
     .main-info {
         display: flex;

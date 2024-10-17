@@ -26,7 +26,7 @@
                         @for (casino of casinoes; track $index;) {
                           <div class="materialCheckbox">
                             <div>
-                              <mat-checkbox labelPosition="before" class="modal-checkbox" [checked]="selectedCasinos()[$index]" 
+                              <mat-checkbox labelPosition="before" class="modal-checkbox white" [checked]="selectedCasinos()[$index]" 
                               (change)="toggleCasino($index)">
                                 {{casino.name}} Casino
                               </mat-checkbox>

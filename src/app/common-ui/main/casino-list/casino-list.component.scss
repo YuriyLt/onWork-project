@@ -15,110 +15,89 @@
   flex-wrap: wrap;
 } 
 
-.container:nth-child(odd) {
-  margin-right: 22px;
+.splitContainer {
+  display: flex;
+  flex-direction: column;
 }
 
-.container {  
-  display: grid;
-  justify-content: space-between;
-  width: calc((100% - 52px)/2);
-  grid-template-columns: 132px 570px;
-  grid-template-rows: 177px auto;
-  gap: 16px 0;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "casinoType aboutCasino"
-    "casinoType paymentSection"; 
+.container:nth-child(odd) {
+  margin-right: 1.375rem;
+}
+
+.container {
+  width: calc((100% - 3.25rem)/2);
+  display: flex;
+  gap: 1rem;
   background-color: var(--second-bg-color);
   border-radius: 10px;
   padding: 24px;
-  margin-bottom: 32px;
-}
-
-.casinoType { 
-  grid-area: casinoType;
-  height: 254px;
+  margin-bottom: 2rem;
 }
 
 .aboutCasino { 
-  grid-area: aboutCasino;
-  height: 177px;
   color: #fff;
 }
 
 .aboutCasino > h2 {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 
 .aboutCasino > ul {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   padding: 0;
 }
 
 .aboutCasino > ul > li:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: .75rem;
 }
 
 .aboutCasino > ul > li > img {
-  margin-right: 20px;
-  width: 24px;
-  height: 24px;
+  margin-right: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.paymentSection { 
-  grid-area: paymentSection;
- }
+.paymentSection {
+  max-width: 29.4375rem;
+}
 
  .paymentSection > h2 {
-  grid-area: h2;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #fff;
  }
 
  .paymentSection-showmore {
-  grid-area: paymentSection-showmore;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: .875rem;
+  line-height: 1.3125rem;
   text-decoration: none;
  }
 
- 
-.casino-container {  
-  display: grid;
-  grid-template-columns: 132px;
-  grid-template-rows: 126px 21px 44px;
-  gap: 13px 0;
-  grid-template-areas:
-    "logo"
-    "ratings"
-    "buttonVisit";
-}
+ .casinoType {
+  flex-direction: column;
+ }
 
 .logo { 
-  grid-area: logo;
-  width: 132px;
-  height: 126px;
-  border-radius: 10px;
-  padding: 30px, 26px, 30px, 26px;
-  gap: 10px;
+  width: 8.25rem;
+  height: 7.875rem;
+  border-radius: .625rem;
+  padding: 1.875rem, 1.625rem, 1.875rem, 1.625rem;
+  gap: .625rem;
   background-color: #323082;
   align-content: center;
   text-align: center;
 }
 
 .ratings {
-  grid-area: ratings;
-  display: inline-flex;
-  justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 .rating { 
@@ -128,21 +107,18 @@
   color: #fff;
 }
 
-.buttonVisit { 
-  grid-area: buttonVisit;
-}
 
 .buttonVisit > button {
-  width: 132px;
-  height: 44px;
-  padding: 6px 24px 6px 24px;
+  width: 8.25rem;
+  height: 2.75rem;
+  padding: .375rem 1.5rem .375rem 1.5rem;
   border: none;
   border-radius: 32px;
   background: #FF7300;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
-  margin-top: 37px;
+  margin-top: 2.3125rem;
 }
 
 .buttonVisit > button > a {
@@ -151,8 +127,8 @@
 }
 
 .paymentsBtn {
-  width: 80px;
-  height: 21px;
+  width: 5rem;
+  height: 1.3125rem;
   background-color: transparent;
   color: #1885E9 ;
   font-weight: 600;
@@ -165,12 +141,40 @@
 .paymentMethod {
   background-color: #21215E;
   border-radius: 22px;
-  width: 76px;
-  height: 29px;
+  width: 4.75rem;
+  height: 1.8125rem;
 }
 
 .paymentMethods {
   display: flex;
   flex-wrap: wrap;
   gap: 3px;
+}
+
+@media (max-width: 1479px) {
+  .position-container {
+    flex-direction: column;
+  }
+
+  .container {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .splitContainer {
+    width: 100%;
+  }
+
+  .paymentSection {
+    max-width: 100%;
+  }
+
+  .paymentMethod {
+    width: 16.3%;
+  }
+
+  .container:nth-child(odd) {
+    margin-right: 1.375rem;
+  }
 }

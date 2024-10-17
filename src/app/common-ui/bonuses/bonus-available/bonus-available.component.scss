@@ -167,6 +167,25 @@ h2 {
     padding: 0;
 }
 
+
+
+// ::ng-deep { .mat-checkbox .mat-checkbox-frame .mdc-checkbox__native-control {
+//     border-color: #fff;
+// } }
+
+::ng-deep {
+    .mdc-form-field {
+        color: #fff !important;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    md-checkbox.md-checked.white .md-icon {
+        background-color: #fff;
+    }
+}
+
 .materialCheckbox {
     padding: 5px 20px;
 }
