@@ -1,60 +1,47 @@
 .available-bg {
-    width: 1628px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
 }
 
-.available {  
-    display: grid;
-    grid-template-columns: 132px 342.33px;
-    grid-template-rows: 220px;
-    gap: 15px 15px;
-    grid-template-areas:
-      "available-visual available-container";
+.available {
+    width: 480px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    padding: 16px;
     background-color: var(--second-bg-color);
     border-radius: 10px;
-    width: 521.33px;
-    height: 250px;
-    padding: 16px;
-    margin-bottom: 16px;
-    margin-right: 32px;
 }
 
-.available:nth-child(3n) {
-    margin-right: 0;
-}
-  
-.available-visual { 
-    grid-area: available-visual; 
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 132px; 
-    grid-template-rows: 126px 22.29px; 
-    gap: 10px 0px; 
-    grid-template-areas: 
-    "available-logo"
-    "available-rating"; 
+.available:not(:nth-child(3n)) {
+    margin-right: 80px;
 }
   
 .available-container { 
     color: #fff;
-    grid-area: available-container;
+}
+
+.available-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-right: 1rem;
 }
 
 .available-logo { 
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: available-logo;
     background-color: #323082; 
-    width: 132px;
-    height: 126px;
+    width: 8.25rem;
+    height: 7.875rem;
     border-radius: 10px;
 }
+
 .available-rating { 
-    grid-area: available-rating;
     margin-left: auto;
     margin-right: auto;
 }
@@ -77,14 +64,14 @@
 }
 
 .available-container > ul > li:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
 }
 
 .available-btn {
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     background-color: #343374;
     border-radius: 32px;
-    padding: 6px 24px;
+    padding: .375rem 1.5rem;
     border: none;
 }
 
@@ -102,7 +89,7 @@ h2 {
     line-height: 30px;
     color: #fff;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .modal-header {
@@ -138,12 +125,11 @@ h2 {
 }
 
 .modalBtn {
-    width: auto             ;
-    height: 44px;
+    height: 2.75rem;
     border-radius: 32px;
     border: none;
-    padding: 6px 24px;
-    gap: 10px;
+    padding: .375rem 1.5rem;
+    gap: .625rem;
     font-weight: 700;
     font-size: 14px;
     line-height: 21px;
@@ -153,7 +139,7 @@ h2 {
 
 .optionButtons {
     display: inline-flex;
-    gap: 50px;
+    gap: 3.125rem;
 }
 
 .modalFooter {
@@ -181,7 +167,7 @@ h2 {
         line-height: 27px;
     }
 
-    md-checkbox.md-checked.white .md-icon {
+    .md-checkbox.md-checked.white .md-icon {
         background-color: #fff;
     }
 }
@@ -212,10 +198,38 @@ h2 {
     right: 160px;
 }
 
+@media (max-width: 1599px) {
+    .available {
+        width: calc((100% - 6%) / 3);
+    }
+
+    .available:not(:nth-child(3n)) {
+        margin-right: 3%;
+    }
+}
+
 @media (max-width: 1479px) {
     .filterOpener {
         top: 420px;
         right: 38.5%;
+    }
+
+    .available {
+        width: calc((100% - 10%) / 2);
+    }
+
+    .available-bg {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1040px) {
+    .available {
+        width: 100%;
+    }
+
+    .available:not(:nth-child(3n)) {
+        margin-right: 0;
     }
 }
 

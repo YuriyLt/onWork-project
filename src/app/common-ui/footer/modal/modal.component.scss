@@ -1,6 +1,6 @@
 .btn-primary {
-    width: 288px;
-    height: 50px;
+    width: 18rem;
+    height: 3.125rem;
     border-radius: 47px;
     border: 2px solid;
     border-color: #5C67ED;
@@ -8,8 +8,8 @@
 }
 
 .btn-close {
-    width: 18.63px;
-    height: 18.63px;
+    width: 1.1644rem;
+    height: 1.1644rem;
     color: #fff;;
     margin: 0;
 }
@@ -32,18 +32,18 @@
 }
 
 .modal-content {
-    width: 948px;
-    height: 616px;
+    width: 59.25rem;
+    height: 38.5rem;
     background-color: var(--second-bg-color); 
     border-radius: 37px;
 }
-.modal-dialog {
-    width: 948px;
-    height: 616px;
-    position: relative;
-    pointer-events: none;
+// .modal-dialog {
+//     width: 59.25rem;
+//     height: 38.5rem;
+//     position: relative;
+//     pointer-events: none;
     
-}
+// }
 
 .modal-header {
     display: flex;
@@ -52,8 +52,8 @@
 }
 
 .modal-body {
-    width: 948px;
-    height: 616px;
+    width: 59.25rem;
+    height: 38.5rem;
 }
 
 .modal-form {
@@ -65,8 +65,7 @@
 }
 
 .modalEmail, .modalTopic, .modalMessage {
-    width: auto;
-    height: 50px;
+    height: 3.125rem;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
@@ -74,9 +73,9 @@
     background-color: #343374;
     border: none;
     border-radius: 44px;
-    padding-left: 32px;
-    padding-top: 11.5px;
-    padding-bottom: 11.5px;
+    padding-left: 2rem;
+    padding-top: .7188rem;
+    padding-bottom: .7188rem;
 }
 
 .modalMessage {

@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, OnInit, viewChild, Signal, signal, computed} from '@angular/core';
-import { Casino, casinoes } from '../../../casino';
-import { CommonModule, getLocaleWeekEndRange, NgFor } from '@angular/common';
+import { Component, signal, WritableSignal} from '@angular/core';
+import { Casino,  } from '../../../casino';
+import { CommonModule } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox'
-import { FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalComponent } from '../../footer/modal/modal.component';
 import { casinoesService } from '../../../casinoes.service';
 
@@ -22,29 +22,17 @@ import { casinoesService } from '../../../casinoes.service';
     '../../../../overwrited.styles.scss'  
   ] 
 })
-export class BonusAvailableComponent implements OnInit {
+export class BonusAvailableComponent {
 
   public readonly casinoes: Casino[] = this.OpCasinoes.casinoes;
   public form: FormGroup = new FormGroup({});
   public isFormLoaded: boolean = true;
-  public filteredCasinos: any = [...this.OpCasinoes.casinoes];
+  public filteredCasinos: WritableSignal<any[]> = signal([...this.OpCasinoes.casinoes]);
   public isFiltered: boolean = true;
 
   selectedCasinos = signal<boolean[]>(Array(this.casinoes.length).fill(false));
 
-  constructor(private OpCasinoes: casinoesService, private fb: FormBuilder ) {}
-
-  ngOnInit(): void {
-    this.filteredCasinos = computed(() => {
-      return this.casinoes.concat();
-    });
-  }
-
-  //  openModal() {
-  //   this.filteredCasinos = computed(() => {
-  //     return this.casinoes.filter((_, index) => this.selectedCasinos()[index]);
-  //   });
-  // }
+  constructor(private OpCasinoes: casinoesService, private fb: FormBuilder ) {};
 
   toggleCasino(index: number): void {
     const updatedCasinoes = [...this.selectedCasinos()];
@@ -52,16 +40,12 @@ export class BonusAvailableComponent implements OnInit {
     this.selectedCasinos.set(updatedCasinoes);
   }
 
-  applyFilters() {
-    this.filteredCasinos = computed(() => {
-      return this.casinoes.filter((_, index) => this.selectedCasinos()[index]);
-    });
+  applyFilters():void {
+    this.filteredCasinos.set(this.casinoes.filter((_, index) => this.selectedCasinos()[index]));
   }
 
   clearFilters(): void {
-    this.filteredCasinos = computed(() => {
-      return this.casinoes.concat();
-    });
+    this.filteredCasinos.set([...this.OpCasinoes.casinoes]);
     this.selectedCasinos.set(Array(this.casinoes.length).fill(false));
   }
 }

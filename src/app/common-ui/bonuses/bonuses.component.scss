@@ -1,6 +1,8 @@
 .bn-cnt {
     width: 1600px;
     margin: auto;
+    // padding-left: 3%;
+    // padding-right: 3%;
 }
 
 .bonus-container {
@@ -73,15 +75,26 @@ h2 {
     margin-top: 50px;
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 1040px) {
     .bn-cnt {
         width: 100%;
-        padding-left: 10%;
-        padding-right: 10%;
+        margin: 0;
+        padding: 0 1%;
+    }
+}
+
+@media (max-width: 1599px) {
+    .bn-cnt {
+        width: calc(100% - 12.5rem);
+        margin: auto;
+        padding: 0;
     }
 }
 
 @media (max-width: 1479px) {
+    .bn-cnt {
+        padding: 0 1%;
+    }
     .bonus-container {
         align-items: center;
     }

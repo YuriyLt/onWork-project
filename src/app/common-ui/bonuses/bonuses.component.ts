@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BonusAvailableComponent } from './bonus-available/bonus-available.component';
 import { TournamentsComponent } from '../tournaments/tournaments.component';
+import { casinoesService } from '../../casinoes.service';
 
 @Component({
   selector: 'app-bonuses',
@@ -12,8 +13,5 @@ import { TournamentsComponent } from '../tournaments/tournaments.component';
     '../footer/modal/modal.component.scss',
   ],
 })
-export class BonusesComponent {
-  moreBonuses() {
-    
-  }
-}
+export class BonusesComponent {}
+

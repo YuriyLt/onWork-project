@@ -11,8 +11,7 @@
 .desc {
     display: block;
     text-align: center;
-    width: 1178px;
-    margin-left: calc((100% - 1178px)/2);
+    width: 100%;
     color: #fff;
     font-weight: 400;
     font-size: 18px;
@@ -25,7 +24,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 250px;
+    margin: auto;
 }
 
 .tournament {
