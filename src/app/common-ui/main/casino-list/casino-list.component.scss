@@ -151,15 +151,21 @@
   gap: 3px;
 }
 
+.paymentMethod > img {
+  width: 85%;
+  height: 80%;
+}
+
 @media (max-width: 1479px) {
   .position-container {
     flex-direction: column;
   }
 
   .container {
-    margin: 0;
+    margin: 0 !important;
+    align-self: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem !important;
   }
 
   .splitContainer {

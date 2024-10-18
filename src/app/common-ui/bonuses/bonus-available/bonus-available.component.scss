@@ -153,6 +153,10 @@ h2 {
     padding: 0;
 }
 
+.checkbox-label {
+    color: #fff;
+}
+
 
 
 // ::ng-deep { .mat-checkbox .mat-checkbox-frame .mdc-checkbox__native-control {
@@ -169,6 +173,15 @@ h2 {
 
     .md-checkbox.md-checked.white .md-icon {
         background-color: #fff;
+    }
+
+    .mdc-checkbox__background {
+        border-color: #fff !important;
+        background-color: #fff !important;
+    }
+
+    .mat-mdc-checkbox {
+        width: auto !important;
     }
 }
 
@@ -197,6 +210,8 @@ h2 {
     top: 305px;
     right: 160px;
 }
+
+
 
 @media (max-width: 1599px) {
     .available {
