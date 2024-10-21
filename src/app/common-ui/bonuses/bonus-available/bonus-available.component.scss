@@ -246,6 +246,17 @@ h2 {
     .available:not(:nth-child(3n)) {
         margin-right: 0;
     }
+
+    .filterOpener {
+        right: 31%;
+    }
+}
+
+@media (max-width: 714px) {
+    .filterOpener {
+        top: 470px;
+        right: 26%;
+    }
 }
 
 .casinoFilterCounter {

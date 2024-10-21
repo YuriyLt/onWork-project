@@ -40,3 +40,9 @@
     line-height: 27px;
     margin-bottom: 50px;
 }
+
+@media (max-width: 576px) {
+    .mb-16 {
+        margin-bottom: 16px;
+    }
+}

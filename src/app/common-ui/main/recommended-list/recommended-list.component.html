@@ -5,18 +5,18 @@
         @for (casino of casinoes; track $index) {
         <div>
             <div class="sublist row mb-25 align-items-center gy-10">
-                <div class="col-md-2 col-sm-6 col-12 d-flex align-items-center">
+                <div class="col-md-2 col-sm-6 col-12 d-flex align-items-center mb-16">
                     <div class="mr-20"><img height="40px" width="80px" [src]="casino.logo" alt="{{casino.name}}"></div>
                     <div>{{casino.name}}</div>
                 </div>
-                <div class="col-md-2 offset-md-1 col-sm-6 col-12 ">
+                <div class="col-md-2 offset-md-1 col-sm-6 col-12 mb-16">
                     <div class="w-100 d-flex align-items-center justify-content-md-start justify-content-sm-end justify-content-start">
                         <div>{{casino.rating}}</div>
                         <div><img [src]="casino.starRating" alt="StarRating"></div>
                     </div>
                 </div>
                 <div class="col-md-6 offset-md-1 col-12">
-                    <span class="text-white fs-sm-16 fs-14 fw-medium text-capitalize">{{casino.desc}}</span>
+                    <span class="text-white fs-sm-16 fs-14 fw-medium">{{casino.desc}}</span>
                 </div>
             </div>
         </div>
